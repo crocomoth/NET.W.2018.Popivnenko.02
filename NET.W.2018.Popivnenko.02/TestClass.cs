@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NET.W._2018.Popivnenko._02.ClosestNumberProj;
 
 namespace NET.W._2018.Popivnenko._02
 {
@@ -19,6 +20,16 @@ namespace NET.W._2018.Popivnenko._02
             someValue = bitReplacer.ReplaceBits(8, 15, 8, 3);
             someValue = bitReplacer.ReplaceBits(45, 14, 3, 1);
 
+
+            ClosestNumberProj.Searcher searcher = new Searcher();
+            int value1 = 456;
+            someValue = searcher.FindNextBiggerNumber(value1);
+            someValue = searcher.FindNextBiggerNumber(144);
+            someValue = searcher.FindNextBiggerNumber(1234321);
+            someValue = searcher.FindNextBiggerNumber(1234126);
+            someValue = searcher.FindNextBiggerNumber(3456432);
+            someValue = searcher.FindNextBiggerNumber(20);
+            someValue = searcher.FindNextBiggerNumber(20);
         }
 
     }

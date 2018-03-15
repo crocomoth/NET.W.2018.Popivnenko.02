@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C1590A9-9024-4D15-906E-E23E68A8D0B5}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>NET.W._2018.Popivnenko._02</RootNamespace>
-    <AssemblyName>NET.W.2018.Popivnenko.02</AssemblyName>
+    <ProjectGuid>{5A4809AB-4E36-4B22-977F-260CC2714426}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NET.W._2018.Popivnenko._02.ClosestNumberProj</RootNamespace>
+    <AssemblyName>NET.W.2018.Popivnenko.02.ClosestNumberProj</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,19 +30,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestClass.cs" />
+    <Compile Include="Searcher.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NET.W.2018.Popivnenko.02.BitReplacerProj\NET.W.2018.Popivnenko.02.BitReplacerProj.csproj">
       <Project>{a6586700-1ef8-45b9-a8f0-c1b0875dffce}</Project>
       <Name>NET.W.2018.Popivnenko.02.BitReplacerProj</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\NET.W.2018.Popivnenko.02.ClosestNumberProj\NET.W.2018.Popivnenko.02.ClosestNumberProj.csproj">
-      <Project>{5a4809ab-4e36-4b22-977f-260cc2714426}</Project>
-      <Name>NET.W.2018.Popivnenko.02.ClosestNumberProj</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
