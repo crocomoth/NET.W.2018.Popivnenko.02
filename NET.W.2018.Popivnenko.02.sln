@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.W.2018.Popivnenko.02", "NET.W.2018.Popivnenko.02\NET.W.2018.Popivnenko.02.csproj", "{0C1590A9-9024-4D15-906E-E23E68A8D0B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.W.2018.Popivnenko.02.BitReplacerProj", "NET.W.2018.Popivnenko.02.BitReplacerProj\NET.W.2018.Popivnenko.02.BitReplacerProj.csproj", "{A6586700-1EF8-45B9-A8F0-C1B0875DFFCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C1590A9-9024-4D15-906E-E23E68A8D0B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C1590A9-9024-4D15-906E-E23E68A8D0B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C1590A9-9024-4D15-906E-E23E68A8D0B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C1590A9-9024-4D15-906E-E23E68A8D0B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6586700-1EF8-45B9-A8F0-C1B0875DFFCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6586700-1EF8-45B9-A8F0-C1B0875DFFCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6586700-1EF8-45B9-A8F0-C1B0875DFFCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6586700-1EF8-45B9-A8F0-C1B0875DFFCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F407CF7D-0C88-4B0F-83A2-B2864E1304F5}
+	EndGlobalSection
+EndGlobal
