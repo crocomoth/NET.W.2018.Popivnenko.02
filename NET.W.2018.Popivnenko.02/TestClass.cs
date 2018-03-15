@@ -31,6 +31,21 @@ namespace NET.W._2018.Popivnenko._02
             someValue = searcher.FindNextBiggerNumber(3456432);
             someValue = searcher.FindNextBiggerNumber(20);
             someValue = searcher.FindNextBiggerNumber(20);
+
+            ListFilterProj.ListFilter listFilter = new ListFilterProj.ListFilter();
+            List<int> list = new List<int>();
+            list.Add(7);
+            list.Add(86);
+            list.Add(190);
+            list.Add(17);
+            list.Add(15);
+            list.Add(24);
+            List<int> resultList = listFilter.FilterDigit(7, list);
+            resultList.Clear();
+            resultList = listFilter.FilterDigit(1, list);
+            resultList.Clear();
+
+
         }
 
     }

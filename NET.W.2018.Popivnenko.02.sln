@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.W.2018.Popivnenko.02.Bi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.W.2018.Popivnenko.02.ClosestNumberProj", "NET.W.2018.Popivnenko.02.ClosestNumberProj\NET.W.2018.Popivnenko.02.ClosestNumberProj.csproj", "{5A4809AB-4E36-4B22-977F-260CC2714426}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NET.W.2018.Popivnenko.02.ListFilterProj", "NET.W.2018.Popivnenko.02.ListFilterProj\NET.W.2018.Popivnenko.02.ListFilterProj.csproj", "{95BD1E59-DC93-448E-B23E-2E340C94AEC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5A4809AB-4E36-4B22-977F-260CC2714426}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A4809AB-4E36-4B22-977F-260CC2714426}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A4809AB-4E36-4B22-977F-260CC2714426}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BD1E59-DC93-448E-B23E-2E340C94AEC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BD1E59-DC93-448E-B23E-2E340C94AEC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BD1E59-DC93-448E-B23E-2E340C94AEC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BD1E59-DC93-448E-B23E-2E340C94AEC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
