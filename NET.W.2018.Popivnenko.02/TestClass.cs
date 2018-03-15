@@ -46,6 +46,15 @@ namespace NET.W._2018.Popivnenko._02
             resultList.Clear();
 
 
+            NewtonProj.RootFinder rootFinder = new NewtonProj.RootFinder();
+            double someValue2 = rootFinder.FindRoot(1, 5, 0.0001);
+            someValue2 = rootFinder.FindRoot(8, 3, 0.0001);
+            someValue2 = rootFinder.FindRoot(0.001, 3, 0.0001);
+            someValue2 = rootFinder.FindRoot(0.0081, 4, 0.0001);
+            someValue2 = rootFinder.FindRoot(1, 5, 0.0000001);
+
+
+
         }
 
     }

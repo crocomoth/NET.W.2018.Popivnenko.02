@@ -50,6 +50,10 @@
       <Project>{95bd1e59-dc93-448e-b23e-2e340c94aec0}</Project>
       <Name>NET.W.2018.Popivnenko.02.ListFilterProj</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NET.W.2018.Popivnenko.02.NewtonProj\NET.W.2018.Popivnenko.02.NewtonProj.csproj">
+      <Project>{0fa88e01-561c-4a18-b42c-d49fcb0bdf45}</Project>
+      <Name>NET.W.2018.Popivnenko.02.NewtonProj</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
