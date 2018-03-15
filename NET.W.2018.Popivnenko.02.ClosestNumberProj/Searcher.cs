@@ -8,6 +8,7 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
 {
     public class Searcher
     {
+        private System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
 
         private struct Digits
         {
@@ -15,8 +16,17 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             public int dest;
         }
 
+
+        public long ReturnTime()
+        {
+            return stopwatch.ElapsedTicks;
+        }
+
         public int FindNextBiggerNumber(int number)
         {
+            stopwatch.Reset();
+            stopwatch.Start();
+            
             if (number <= 0)
             {
                 return -1;
@@ -27,7 +37,9 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
                 return -1;
             }
             
-            return DoReplaceDigits(number,digits);
+            int result = DoReplaceDigits(number,digits);
+            stopwatch.Stop();
+            return result;
         }
 
         private Digits FindDigitsToReplace(int number)

@@ -26,6 +26,7 @@ namespace NET.W._2018.Popivnenko._02
             someValue = searcher.FindNextBiggerNumber(value1);
             someValue = searcher.FindNextBiggerNumber(144);
             someValue = searcher.FindNextBiggerNumber(1234321);
+            long timeSpan = searcher.ReturnTime();
             someValue = searcher.FindNextBiggerNumber(1234126);
             someValue = searcher.FindNextBiggerNumber(3456432);
             someValue = searcher.FindNextBiggerNumber(20);
