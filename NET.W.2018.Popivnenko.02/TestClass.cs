@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NET.W._2018.Popivnenko._02.ClosestNumberProj;
+using NUnit.Framework;
 
 namespace NET.W._2018.Popivnenko._02
 {
+    [TestFixture]
     public static class TestClass
     {
         

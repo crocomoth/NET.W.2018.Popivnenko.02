@@ -43,5 +43,40 @@ namespace MsUnitTestProject
             int someValue = bitReplacer.ReplaceBits(15, 15, 0, 0);
             Assert.AreEqual(15, someValue);
         }
+
+        [TestMethod]
+        public void BadTest1()
+        {
+            int someValue = bitReplacer.ReplaceBits(15, 15, -1, 5);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [TestMethod]
+        public void BadTest2()
+        {
+            int someValue = bitReplacer.ReplaceBits(15, 15, 5, -1);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [TestMethod]
+        public void BadTest3()
+        {
+            int someValue = bitReplacer.ReplaceBits(15, 15, -1, -100);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [TestMethod]
+        public void BadTest4()
+        {
+            int someValue = bitReplacer.ReplaceBits(15, 15, 4, 5);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [TestMethod]
+        public void BasicTest6()
+        {
+            int someValue = bitReplacer.ReplaceBits(0, 1, 0, 0);
+            Assert.AreEqual(1, someValue);
+        }
     }
 }

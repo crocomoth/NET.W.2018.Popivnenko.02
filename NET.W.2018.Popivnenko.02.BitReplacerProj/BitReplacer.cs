@@ -12,6 +12,10 @@ namespace NET.W._2018.Popivnenko._02.BitReplacerProj
         {
             int sourcedWithNulledBits = 0;
             int mask = 0;
+            if ((leftBorder < 0) || (rightBorder <0 ) || (leftBorder < rightBorder))
+            {
+                return -1;
+            }
             sourcedWithNulledBits = NullifyBits(source, leftBorder, rightBorder);
             mask = CreateMask(leftBorder - rightBorder, 0);
             int bitsToReplace = donor & mask;
