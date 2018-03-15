@@ -80,10 +80,12 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
 
         private int DoReplaceDigits(int number,Digits digits)
         {
+            List<int> pool = new List<int>();
             int digitToBeReplaced = 0;
             int digiToReplace = 0;
             int buf = number;
             int digitCount = 0;
+            int semiFullNumber = 0;
             while (buf > 0)
             {
                 buf /= 10;
@@ -95,10 +97,10 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             digitToBeReplaced = (number / tempPow) % 10;
             tempPow = (int)Math.Pow(10, digits.dest);
             digiToReplace = (number / tempPow) % 10;
-
-            int currDigit = 0;
+            bool StopFillinSemiFull = false;
+            int currDigit = digitCount;
             buf = 0;
-            while (currDigit <= digitCount)
+            while (currDigit >= 0)
             {
                 
                 int pow = (int)Math.Pow(10, currDigit);
@@ -106,17 +108,41 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
                 if (currDigit == digits.source)
                 {
                     digit = digiToReplace;
-                }
+                    StopFillinSemiFull = true;
+                    semiFullNumber += digit * pow;
+                }   
                 if (currDigit == digits.dest)
                 {
                     digit = digitToBeReplaced;
                 }
                 buf += digit * pow;
-                currDigit++;
+                if (StopFillinSemiFull == false)
+                {
+                    semiFullNumber += digit * pow;
+                }
+                currDigit--;
 
 
             }
-            return buf;
+            currDigit = 0;
+            while (currDigit < digits.source)
+            {
+                int pow = (int)Math.Pow(10, currDigit);
+                int digit = (buf / pow) % 10;
+                pool.Add(digit);
+                currDigit++;
+            }
+            pool.Sort();
+            pool.Reverse();
+            currDigit = 0;
+            foreach (var elem in pool)
+            {
+                int pow = (int)Math.Pow(10, currDigit);
+                int digit = elem * pow;
+                semiFullNumber += digit;
+                currDigit++;
+            }
+            return semiFullNumber;
         }
     }
 }
