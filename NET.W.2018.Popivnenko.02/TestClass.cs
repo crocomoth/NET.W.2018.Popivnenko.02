@@ -11,16 +11,27 @@ namespace NET.W._2018.Popivnenko._02
     [TestFixture]
     public static class TestClass
     {
-        
-        
+
+        public static BitReplacerProj.BitReplacer bitReplacer = new BitReplacerProj.BitReplacer();
+
         public static void Main()
         {
-            BitReplacerProj.BitReplacer bitReplacer = new BitReplacerProj.BitReplacer();
+            
             int someValue = bitReplacer.ReplaceBits(45, 14, 3, 1);
             someValue = bitReplacer.ReplaceBits(15, 15, 0, 0);
             someValue = bitReplacer.ReplaceBits(8, 15, 0, 0);
             someValue = bitReplacer.ReplaceBits(8, 15, 8, 3);
             someValue = bitReplacer.ReplaceBits(45, 14, 3, 1);
+
+            someValue = bitReplacer.ReplaceBits(-8,11,3,5);
+            someValue = bitReplacer.ReplaceBits(13,27,11,5);
+            someValue = bitReplacer.ReplaceBits(108,15,3,0);
+            someValue = bitReplacer.ReplaceBits(11,28,8,4);
+            someValue = bitReplacer.ReplaceBits(-10,-12,3,1);
+            someValue = bitReplacer.ReplaceBits(-151,1111,-5,0);
+            someValue = bitReplacer.ReplaceBits(-1812,354,8,3);
+            
+
 
 
             ClosestNumberProj.Searcher searcher = new Searcher();
@@ -57,6 +68,76 @@ namespace NET.W._2018.Popivnenko._02
 
 
 
+        }
+
+        [Test]
+        public static void TestBitReplacer1()
+        {
+            int someValue = bitReplacer.ReplaceBits(45, 14, 3, 1);
+            Assert.AreEqual(45, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer2()
+        {
+            int someValue = bitReplacer.ReplaceBits(15, 15, 0, 0);
+            Assert.AreEqual(15, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer3()
+        {
+            int someValue = bitReplacer.ReplaceBits(8, 15, 8, 3);
+            Assert.AreEqual(120, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer4()
+        {
+            int someValue = bitReplacer.ReplaceBits(-8, 11, 3, 5);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer5()
+        {
+            int someValue = bitReplacer.ReplaceBits(13, 27, 11, 5);
+            Assert.AreEqual(877, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer6()
+        {
+            int someValue = bitReplacer.ReplaceBits(108, 15, 3, 0);
+            Assert.AreEqual(111, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer7()
+        {
+            int someValue = bitReplacer.ReplaceBits(11, 28, 8, 4);
+            Assert.AreEqual(459, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer8()
+        {
+            int someValue = bitReplacer.ReplaceBits(-10, -12, 3, 1);
+            Assert.AreEqual(-8, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer9()
+        {
+            int someValue = bitReplacer.ReplaceBits(-151, 1111, -5, 0);
+            Assert.AreEqual(-1, someValue);
+        }
+
+        [Test]
+        public static void TestBitReplacer10()
+        {
+            int someValue = bitReplacer.ReplaceBits(-1812, 354, 8, 3);
+            Assert.AreEqual(-1772, someValue);
         }
 
     }

@@ -53,6 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitReplacerTester.cs" />
+    <Compile Include="FilterListTester.cs" />
+    <Compile Include="NewtonTester.cs" />
+    <Compile Include="NextBiggerNumberTester.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +65,18 @@
     <ProjectReference Include="..\NET.W.2018.Popivnenko.02.BitReplacerProj\NET.W.2018.Popivnenko.02.BitReplacerProj.csproj">
       <Project>{a6586700-1ef8-45b9-a8f0-c1b0875dffce}</Project>
       <Name>NET.W.2018.Popivnenko.02.BitReplacerProj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NET.W.2018.Popivnenko.02.ClosestNumberProj\NET.W.2018.Popivnenko.02.ClosestNumberProj.csproj">
+      <Project>{5a4809ab-4e36-4b22-977f-260cc2714426}</Project>
+      <Name>NET.W.2018.Popivnenko.02.ClosestNumberProj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NET.W.2018.Popivnenko.02.ListFilterProj\NET.W.2018.Popivnenko.02.ListFilterProj.csproj">
+      <Project>{95bd1e59-dc93-448e-b23e-2e340c94aec0}</Project>
+      <Name>NET.W.2018.Popivnenko.02.ListFilterProj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NET.W.2018.Popivnenko.02.NewtonProj\NET.W.2018.Popivnenko.02.NewtonProj.csproj">
+      <Project>{0fa88e01-561c-4a18-b42c-d49fcb0bdf45}</Project>
+      <Name>NET.W.2018.Popivnenko.02.NewtonProj</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
