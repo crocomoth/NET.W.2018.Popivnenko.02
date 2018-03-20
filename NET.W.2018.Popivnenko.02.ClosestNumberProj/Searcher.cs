@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
 {
+    /// <summary>
+    /// Class that allows to seek for a closest bigger number to the specified value
+    /// which will consist only of a digits from the value.
+    /// </summary>
     public class Searcher
     {
         private System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch();
@@ -16,12 +17,21 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             public int dest;
         }
 
-
+        /// <summary>
+        /// Method allows to get information about last operation's execution time.
+        /// </summary>
+        /// <returns>Execution time of a last operation in ticks.</returns>
         public long ReturnTime()
         {
             return stopwatch.ElapsedTicks;
         }
 
+        /// <summary>
+        /// Method allows to find a closest bigger number to the specified value
+        /// or returns -1 in case it doesn't have any.
+        /// </summary>
+        /// <param name="number">Number which will be used in calculation.</param>
+        /// <returns>Either closest bigger number or -1.</returns>
         public int FindNextBiggerNumber(int number)
         {
             stopwatch.Reset();
@@ -42,6 +52,8 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             return result;
         }
 
+
+        #region WeirdLogic
         private Digits FindDigitsToReplace(int number)
         {
             int digitCount = 0;
@@ -109,7 +121,7 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             digitToBeReplaced = (number / tempPow) % 10;
             tempPow = (int)Math.Pow(10, digits.dest);
             digiToReplace = (number / tempPow) % 10;
-            bool StopFillinSemiFull = false;
+            bool digitAfterWhichReplacementsToBeMadeFound = false;
             int currDigit = digitCount;
             buf = 0;
             while (currDigit >= 0)
@@ -120,7 +132,7 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
                 if (currDigit == digits.source)
                 {
                     digit = digiToReplace;
-                    StopFillinSemiFull = true;
+                    digitAfterWhichReplacementsToBeMadeFound = true;
                     semiFullNumber += digit * pow;
                 }   
                 if (currDigit == digits.dest)
@@ -128,7 +140,7 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
                     digit = digitToBeReplaced;
                 }
                 buf += digit * pow;
-                if (StopFillinSemiFull == false)
+                if (digitAfterWhichReplacementsToBeMadeFound == false)
                 {
                     semiFullNumber += digit * pow;
                 }
@@ -156,5 +168,6 @@ namespace NET.W._2018.Popivnenko._02.ClosestNumberProj
             }
             return semiFullNumber;
         }
+        #endregion //WeirdLogic
     }
 }

@@ -42,7 +42,7 @@ namespace NET.W._2018.Popivnenko._02
             long timeSpan = searcher.ReturnTime();
             someValue = searcher.FindNextBiggerNumber(1234126);
             someValue = searcher.FindNextBiggerNumber(3456432);
-            someValue = searcher.FindNextBiggerNumber(20);
+            someValue = searcher.FindNextBiggerNumber(51321);
             someValue = searcher.FindNextBiggerNumber(20);
 
             ListFilterProj.ListFilter listFilter = new ListFilterProj.ListFilter();

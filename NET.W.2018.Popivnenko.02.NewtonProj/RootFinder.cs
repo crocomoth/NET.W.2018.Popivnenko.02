@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace NET.W._2018.Popivnenko._02.NewtonProj
 {
+    /// <summary>
+    /// Class that allows to get a nth root of a number
+    /// with specified accuracy.
+    /// </summary>
     public class RootFinder
     {
+        /// <summary>
+        /// Method that allows to get a nth root of a number 
+        /// with specified accuracy. 
+        /// </summary>
+        /// <param name="number">Number which root will be calculated.</param>
+        /// <param name="root">Root of a number to be calculatrd.</param>
+        /// <param name="accuracy">Accuracy wit which result will be calculated.</param>
+        /// <returns>Nth root of a number with specified accuracy.</returns>
         public double FindRoot(double number,int root,double accuracy)
         {
             if (accuracy < 0)

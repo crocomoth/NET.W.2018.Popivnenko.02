@@ -1,13 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace NET.W._2018.Popivnenko._02.BitReplacerProj
+﻿namespace NET.W._2018.Popivnenko._02.BitReplacerProj
 {
+    /// <summary>
+    /// Class that replaces specified bits of a number with
+    /// corresponding amount of other number strarting from beggining.
+    /// </summary>
     public class BitReplacer
     {
+
+        /// <summary>
+        /// Method that is called to change bits in number in way specified in class description
+        /// </summary>
+        /// <param name="source">Number that will be changed.</param>
+        /// <param name="donor">Number which bits will be used in replacing.</param>
+        /// <param name="leftBorder">Index of the highest bit to be replaced.</param>
+        /// <param name="rightBorder">Index of the lowest bit to be replaced.</param>
+        /// <returns>Either changed source parameter or -1 in case of an error.</returns>
         public int ReplaceBits(int source,int donor,int leftBorder,int rightBorder)
         {
             int sourcedWithNulledBits = 0;
